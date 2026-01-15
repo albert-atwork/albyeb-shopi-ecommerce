@@ -1,73 +1,40 @@
-# React + TypeScript + Vite
+# Albyeb Shopi E-Commerce Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive e-commerce application built with React and TypeScript. Features product browsing, cart/wishlist management, user authentication, profile settings, and a simulated checkout process. Designed as a portfolio project to demonstrate frontend skills.
 
-Currently, two official plugins are available:
+## Features
+- Homepage with dynamic gallery and hero section
+- Shop page with search, product modals, and add to cart/wishlist
+- Cart and Wishlist with live updates, quantity controls, and badges
+- User auth (login/register) with protected routes and redirects
+- Profile with tabs for account, orders, payments (interactive add/remove), etc.
+- Checkout with multi-payment options (Visa, Mastercard, MTN MoMo, Bank, PayPal)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
+- React 18 + TypeScript
+- Vite for fast development/build
+- Zustand for state management (with localStorage persistence)
+- React Router for navigation
+- Lucide Icons for UI elements
+- Sonner for notifications/toasts
+- React Hook Form + Zod for form validation
 
-## React Compiler
+## Installation
+To run locally:
+1. Clone the repo: `git clone https://github.com/yourusername/albyeb-shopi-ecommerce.git`
+2. Navigate to folder: `cd albyeb-shopi-ecommerce`
+3. Install dependencies: `npm install`
+4. Start dev server: `npm run dev`
+5. Open http://localhost:5173 in browser
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Usage
+- Browse home/shop without login
+- Login/register to access protected features (shop, cart, wishlist, checkout)
+- Add products to cart, manage quantity, proceed to simulated checkout
 
-## Expanding the ESLint configuration
+## Notes
+- Payments are simulated (no real integration) – for demo only.
+- Persistent sessions via localStorage.
+- Responsive design for mobile/desktop.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Built by Albert – CS Graduate Portfolio Project (2025). MIT License.
